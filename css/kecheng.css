@@ -1,0 +1,40 @@
+/*样式的重置*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+body{
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+ul li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+input{
+    border: none;
+    outline: none;
+}
+
+/*公用的样式*/
+.f_leth{
+    float: left;
+}
+.f_right{
+    float: right;
+   }
+.clear::before,
+.clear::after{
+    content: "";
+    clear: both;
+    display: table;
+}

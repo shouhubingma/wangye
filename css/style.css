@@ -1,0 +1,112 @@
+.style_layout {
+    width: 6.40rem;
+    min-height: 2rem;
+}
+.style_logo,.style_search,.style_banner,.style_new,.style_hot,.style_fasion,.style_footer{
+    width: 6.4rem;
+}
+.style_logo{
+    padding-top: 0.1rem;
+    height: 0.6rem;
+    background: #f3f3f3;
+    position: fixed;
+    top: 0;
+}
+.style_logo span{
+    display: block;
+    width: 2.1rem;
+    height: 0.4rem;
+    margin: auto;
+}
+.style_logo span img{
+    width: 100%;
+    display: block;
+}
+.style_search {
+    background: white;
+    position: fixed;
+    top:0.6rem ;
+
+}
+.style_search input {
+    width: 92%;
+    height: 0.51rem;
+    border: 1px solid #f3f3f3;
+    font-size: 0.16rem;
+    float: left;
+    margin: 0.20rem auto;
+}
+.style_search .sousuo{
+    width: 8%;
+    float: right;
+    margin: 0.20rem auto;
+}
+
+.style_search .sousuo img {
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.style_banner {
+    width: 6.4rem;
+    height: 4.6rem;
+    margin-top:1.4rem ;
+}
+.style_banner ul li a img{
+    width: 100%;
+}
+.style_new,.style_hot,.style_fasion{
+    height: auto;
+}
+.style_newtext,.style_hotext {
+    width: 6.4rem;
+    height: auto;
+    margin: 0.1rem auto;
+    text-align: center;
+}
+.style_new ul li{
+    width: 2.13rem;
+    height: auto;
+    float: left;
+}
+.style_new ul li a img,.style_hot ul li a img,.style_fasion ul li a img{
+    width: 100%;
+}
+.style_new ul li a p,.style_footer ul li a p{
+    text-align: center;
+    color: #000;
+}
+.style_new .style_newinput{
+    width: 6.4rem;
+    margin:auto;
+}
+.style_new .style_newinput button{
+   margin-top: 0.2rem;
+}
+.style_hot ul li{
+    width: 2rem;
+    height: auto;
+    float: left;
+    margin-left: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.style_footer{
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    z-index: 9999;
+    background: white;
+}
+.style_footer ul li {
+    width: 1.28rem;
+    height: auto;
+    float: left;
+    text-align: center;
+
+}
+.style_footer ul li a img{
+    margin-top: 0.1rem;
+    width: 30%;
+    margin-bottom: 0.1rem;
+}
+
