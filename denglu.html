@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+        }
+        body{
+            font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            color: #000;
+        }
+        .beijing{
+            width: 6.4rem;
+            height: auto;
+            background: url("img_full/login_bgx.gif");
+        }
+        .biaoge{
+            width: 4.6rem;
+            height: 4.6rem;
+            margin: 0.1rem auto;
+        }
+        .logo{
+            width: 2rem;
+            height: auto;
+            margin: 0.1rem auto;
+            margin-top: 2rem;
+        }
+        .logo img {
+            width: 100%;
+            display: block;
+        }
+        .logo  p{
+            text-align: center;
+        }
+        .biaoge form{
+            width: 4rem;
+            height: 2rem;
+            margin: 0.1rem auto;
+        }
+        .biaoge form input{
+            width: 70%;
+            height: 0.36rem;
+            border: none;
+            background: none;
+            float: left;
+
+        }
+        .biaoge form .tijiao{
+            width: 100%;
+            border:  1px solid #515150;
+            background: 0;
+            margin-top: 0.1rem;
+        }
+        .biaoge .footer {
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+        }
+        .biaoge .footer .zhuce{
+            float: left;
+        }
+        .biaoge .footer .wangji{
+            float: right;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .biaoge form span{
+            display: block;
+            height: 0.36rem;
+            border-bottom:1px solid #515150;
+            line-height: 0.4rem;
+        }
+    </style>
+</head>
+<body class="beijing">
+   <div class="biaoge">
+       <div class="logo">
+           <img src="img_full/logo.png" alt="">
+           <p>探索潮流生活时态</p>
+       </div>
+       <form action="#" method="post" onsubmit="return form()">
+           <input type="text" placeholder="请输入手机号码" id="userPhone" class="userName"><span class="default" id="phoneErr"></span>
+           <input type="password" placeholder="请输入登录密码"><span></span>
+           <input type="submit" value="登录" class="tijiao">
+       </form>
+       <p class="footer"><span class="zhuce"><a href="zhuce.html">注册</a></span><span class="wangji"><a href="#">忘记密码</a></span></p>
+   </div>
+
+
+<script src="js/fontSizeSet.js"></script>
+   <script>
+       function f(id, text) {
+           document.querySelector(id).innerHTML = text;
+       }
+       function b(id,idTips,text){
+           var userphone = document.getElementById('userPhone');
+           var phonrErr = document.getElementById('phoneErr');
+           var pattern = /^1[34578]\d{9}$/; //验证手机号正则表达式
+           if(!pattern.test(userphone.value)){
+               phonrErr.innerHTML="手机号码不合规范"
+               phonrErr.className="error"
+               return false;
+           }
+           else{
+               phonrErr.innerHTML=""
+               phonrErr.className="success";
+               return true;
+           }
+       }
+       //用户名焦点事件
+       var user = document.querySelector("#userPhone");
+       user.addEventListener("focus", function () {
+           f("#userTips", "");
+       });
+       //失去焦点
+       user.addEventListener("blur",function(){
+           b("#user","#userTips","请输入有效的手机号码");
+       });
+   </script>
+</body>
+</html>
